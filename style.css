@@ -4,10 +4,15 @@
   padding: 0;
 }
 
+:root {
+  --board-size: calc(100vw - 10px);
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -40,4 +45,21 @@ body {
 .casilla:nth-child(2n + 50):nth-child(-n + 56),
 .casilla:nth-child(2n + 57):nth-child(-n + 64) {
   background-color: rgb(244, 162, 148);
+}
+
+/* small */
+@media (min-width: 576px) {
+  /*  */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --board-size: 550px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --board-size: 400px;
+  }
 }
